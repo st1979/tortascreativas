@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIOS</title>
+</head>
+<body>
+
+    <header>
+        <!-- Menú de navegación -->
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="lista.html">Listas</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="tabla.html">Tabla</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="https://www.google.com/" target="_blank">Google</a>
+            <a href="#enlace-interno">Ver texto</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main>
+
+        <form action="https://formspree.io/f/mrgwpnnn" method="post">
+
+            <!-- Crear campos para nombre, apellido, fecha de nacimiento
+            y edad.  -->
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba nombre. Ej: María">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="fn">Fecha de nacimiento:</label>
+                <input type="date" name="fn" id="fn">
+            </div>
+           
+            <br>
+
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" required min="18">
+            </div>
+
+
+            <hr>
+            <br>
+
+            <div>
+                <label for="genero">Seleccione un género:</label>
+                <select name="genero" id="genero">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+            </div>
+
+            <hr>
+            <br>
+
+            <div>
+                <h3>Seleccione un área a desarrollarse:</h3>
+
+                
+                <input type="radio" name="area" id="app" value="app">
+                <label for="app">App Web</label>
+            
+                <input type="radio" name="area" id="datos" value="datos">
+                <label for="datos">Análisis de datos</label>
+            
+                <input type="radio" name="area" id="juegos" value="juegos">
+                <label for="juegos">Desarrollo de juegos</label>
+
+            </div>
+
+            <hr>
+            <br>
+
+            <div>
+                <!--  Agregar opciones para seleccionar tecnología con checkbox: HTML, CSS, JS -->
+
+                <!-- FUNCIONA PERFECTAMENTE, EL NAVEGADOR NO ESTABA TOMANDO
+                LOS CAMBIOS QUE SE HICIERON AL INCLUIR LOS VALUE.
+                LES DEJO UNA IMAGEN EN LA CARPETA IMG, PARA QUE PUEDAN VER QUE 
+                LLEGARON LOS DATOS COMPLETOS ^_^
+                -->
+                <h3>Seleccione tecnologías:</h3>
+                
+                <input type="checkbox" name="tecnologia" id="html" value="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" name="tecnologia" id="css" value="css">
+                <label for="css">CSS</label>
+
+                <input type="checkbox" name="tecnologia" id="js" value="js">
+                <label for="js">JS</label>
+
+
+            </div>
+
+            
+            <hr>
+            <br>
+
+            <div>
+                <!-- Agregar opciones para navegador:Chrome,Opera,Safari,Firefox, Edge. -->
+
+                <label for="navegador">Seleccione navegador:</label>
+                <input list="browsers" id="navegador" name="navegador">
+                <datalist id="browsers">
+                    <option value="Chrome"></option>
+                    <option value="Opera"></option>
+                    <option value="Safari"></option>
+                    <option value="Firefox"></option>
+                    <option value="Edge"></option>
+
+                </datalist>
+
+            </div>
+
+            <br>
+
+            <fieldset>
+                <!-- Agregar área para datos personales con fieldset: teléfono, correo. -->
+                <legend>Datos personales:</legend>
+
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono">
+                </div>
+
+                <div>
+                    <label for="email">Correo:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+            </fieldset>
+
+            <br>
+
+            <div>
+                <label for="comentario">Comentario:</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Escriba un comentario"></textarea>
+            </div>
+
+
+            <br>
+            <hr>
+            
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <h3>Curso Full Stack Python</h3>
+    </footer>
+    
+</body>
+</html>
